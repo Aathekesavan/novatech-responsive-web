@@ -73,7 +73,7 @@ d:/FS asi/task-1-responsive-web/
 - **Breadcrumb Navigation:** Clear spatial hierarchy.
 - **Responsive Aside Filters:**
   - Department selection checkboxes.
-  - Dynamic price range slider ($50 – $2,000) with interactive live value label.
+  - Dynamic price range slider (₹2,000 – ₹1,00,000) with interactive live value label.
   - Brand filters (NovaTech, Aether, Zenith, SonicAir, Lumina).
   - Star rating filter and stock availability switches.
 - **Catalog Toolbar:** Live item count and Sort-By dropdown selector.
