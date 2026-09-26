@@ -25,65 +25,45 @@
     </div>
   </div>
 
-  <!-- Primary Amazon / Flipkart Multi-Tier Header -->
+  <!-- Modern Tech Header -->
   <header class="site-header">
     <div class="nav-top-bar">
       <!-- Brand Logo -->
       <a href="index.html" class="brand-logo" aria-label="NovaTech Homepage">
-        <span>⚡ Nova<span class="logo-accent">Tech</span></span>
+        <div class="logo-icon">⚡</div>
+        <span>Nova<span class="logo-accent">Tech</span></span>
       </a>
 
-      <!-- Delivery Location Widget -->
-      <div class="nav-location" title="Delivery Location">
-        <span class="nav-location-icon">📍</span>
-        <div class="nav-location-text">
-          <span>Deliver to Chennai</span>
-          <strong>600001</strong>
-        </div>
-      </div>
-
-      <!-- Wide Central Search Bar -->
+      <!-- Central Search Bar -->
       <form class="nav-search-bar" action="products.html" method="GET" role="search">
-        <select class="nav-search-category" aria-label="Select Category">
-          <option value="all">All Departments</option>
-          <option value="audio">Audio & Headphones</option>
-          <option value="computing">Laptops & PCs</option>
-          <option value="wearables">Smartwatches</option>
-          <option value="gaming">Gaming Tech</option>
-        </select>
-        <input type="search" name="q" class="nav-search-input" placeholder="Search NovaTech for laptops, audio, smartwatches..." aria-label="Search products">
+        <input type="search" name="q" class="nav-search-input" placeholder="Search audio, laptops, smartwatches, cameras..." aria-label="Search products">
         <button type="submit" class="nav-search-btn" aria-label="Submit search">🔍</button>
       </form>
 
-      <!-- Account / Returns / Cart -->
-      <div class="nav-user-item">
-        <span class="nav-line-1">Hello, Sign In</span>
-        <span class="nav-line-2">Account & Lists ▾</span>
-      </div>
+      <!-- Navigation Links -->
+      <nav class="nav-links-wrap">
+        <a href="index.html" class="nav-link-btn">Home</a>
+        <a href="products.html" class="nav-link-btn">Products</a>
+        <a href="product-detail.html" class="nav-link-btn">Featured</a>
+        <a href="contact.html" class="nav-link-btn">Support & FAQ</a>
+      </nav>
 
-      <a href="cart.html" class="nav-user-item">
-        <span class="nav-line-1">Returns</span>
-        <span class="nav-line-2">& Orders</span>
-      </a>
-
-      <a href="cart.html" class="nav-cart-btn" aria-label="View shopping cart">
-        <div class="nav-cart-icon-wrap">
-          <span class="nav-cart-icon">🛒</span>
-          <span class="nav-cart-badge">2</span>
-        </div>
-        <span class="nav-cart-label">Cart</span>
+      <!-- Cart Pill -->
+      <a href="cart.html" class="nav-cart-pill" aria-label="View shopping cart">
+        <span>🛒 Cart</span>
+        <span class="nav-cart-count-badge cart-count-badge">2</span>
       </a>
     </div>
 
-    <!-- Secondary Nav Ribbon -->
-    <nav class="sub-nav-ribbon" aria-label="Department Ribbon">
+    <!-- Category Ribbon -->
+    <nav class="sub-nav-ribbon" aria-label="Category Navigation">
       <div class="sub-nav-container">
-        <a href="products.html" class="sub-nav-link" style="font-weight: 700;">☰ All</a>
-        <a href="index.html" class="sub-nav-link">⚡ Today's Deals</a>
-        <a href="products.html" class="sub-nav-link">Shop All Products</a>
-        <a href="product-detail.html" class="sub-nav-link">Featured Item</a>
-        <a href="cart.html" class="sub-nav-link active">My Cart</a>
-        <a href="contact.html" class="sub-nav-link">Customer Service</a>
+        <a href="products.html" class="sub-nav-link active">⚡ All Gear</a>
+        <a href="products.html" class="sub-nav-link">🎧 Audio & Studio</a>
+        <a href="products.html" class="sub-nav-link">⌚ Smartwatches</a>
+        <a href="products.html" class="sub-nav-link">💻 Ultrabooks & PCs</a>
+        <a href="products.html" class="sub-nav-link">⌨️ Gaming Gear</a>
+        <a href="products.html" class="sub-nav-link">📷 Cameras & Drones</a>
       </div>
     </nav>
   </header>
@@ -133,7 +113,7 @@
             <tr>
               <td class="cart-product-td" data-label="Product">
                 <div class="cart-product-cell">
-                  <img src="assets/images/headphones.svg" alt="NovaPro Wireless ANC Headphones" class="cart-thumb">
+                  <img src="assets/images/headphones.jpg" alt="NovaPro Wireless ANC Headphones" class="cart-thumb" style="object-fit: cover; border-radius: 8px;">
                   <div>
                     <h2 class="cart-product-name"><a href="product-detail.html">NovaPro Wireless Studio ANC</a></h2>
                     <div class="cart-product-sku">Color: Matte Obsidian | SKU: NVP-920</div>
@@ -165,7 +145,7 @@
             <tr>
               <td class="cart-product-td" data-label="Product">
                 <div class="cart-product-cell">
-                  <img src="assets/images/smartwatch.svg" alt="Aether Pulse Smart AMOLED Watch" class="cart-thumb">
+                  <img src="assets/images/smartwatch.jpg" alt="Aether Pulse Smart AMOLED Watch" class="cart-thumb" style="object-fit: cover; border-radius: 8px;">
                   <div>
                     <h2 class="cart-product-name"><a href="product-detail.html">Aether Pulse Smart AMOLED Watch</a></h2>
                     <div class="cart-product-sku">Color: Slate Black | SKU: AET-510</div>

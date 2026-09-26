@@ -27,64 +27,45 @@
   </div>
 
   <!-- Primary Amazon / Flipkart Multi-Tier Header -->
+  <!-- Modern Tech Header -->
   <header class="site-header">
     <div class="nav-top-bar">
       <!-- Brand Logo -->
       <a href="index.html" class="brand-logo" aria-label="NovaTech Homepage">
-        <span>⚡ Nova<span class="logo-accent">Tech</span></span>
+        <div class="logo-icon">⚡</div>
+        <span>Nova<span class="logo-accent">Tech</span></span>
       </a>
 
-      <!-- Delivery Location Widget -->
-      <div class="nav-location" title="Delivery Location">
-        <span class="nav-location-icon">📍</span>
-        <div class="nav-location-text">
-          <span>Deliver to Chennai</span>
-          <strong>600001</strong>
-        </div>
-      </div>
-
-      <!-- Wide Central Search Bar -->
+      <!-- Central Search Bar -->
       <form class="nav-search-bar" action="products.html" method="GET" role="search">
-        <select class="nav-search-category" aria-label="Select Category">
-          <option value="all">All Departments</option>
-          <option value="audio">Audio & Headphones</option>
-          <option value="computing">Laptops & PCs</option>
-          <option value="wearables">Smartwatches</option>
-          <option value="gaming">Gaming Tech</option>
-        </select>
-        <input type="search" name="q" class="nav-search-input" placeholder="Search NovaTech for laptops, audio, smartwatches..." aria-label="Search products">
+        <input type="search" name="q" class="nav-search-input" placeholder="Search audio, laptops, smartwatches, cameras..." aria-label="Search products">
         <button type="submit" class="nav-search-btn" aria-label="Submit search">🔍</button>
       </form>
 
-      <!-- Account / Returns / Cart -->
-      <div class="nav-user-item">
-        <span class="nav-line-1">Hello, Sign In</span>
-        <span class="nav-line-2">Account & Lists ▾</span>
-      </div>
+      <!-- Navigation Links -->
+      <nav class="nav-links-wrap">
+        <a href="index.html" class="nav-link-btn active">Home</a>
+        <a href="products.html" class="nav-link-btn">Products</a>
+        <a href="product-detail.html" class="nav-link-btn">Featured</a>
+        <a href="contact.html" class="nav-link-btn">Support & FAQ</a>
+      </nav>
 
-      <a href="cart.html" class="nav-user-item">
-        <span class="nav-line-1">Returns</span>
-        <span class="nav-line-2">& Orders</span>
-      </a>
-
-      <a href="cart.html" class="nav-cart-btn" aria-label="View shopping cart">
-        <div class="nav-cart-icon-wrap">
-          <span class="nav-cart-icon">🛒</span>
-          <span class="nav-cart-badge">2</span>
-        </div>
-        <span class="nav-cart-label">Cart</span>
+      <!-- Cart Pill -->
+      <a href="cart.html" class="nav-cart-pill" aria-label="View shopping cart">
+        <span>🛒 Cart</span>
+        <span class="nav-cart-count-badge cart-count-badge">2</span>
       </a>
     </div>
 
-    <!-- Secondary Nav Ribbon -->
-    <nav class="sub-nav-ribbon" aria-label="Department Ribbon">
+    <!-- Category Ribbon -->
+    <nav class="sub-nav-ribbon" aria-label="Category Navigation">
       <div class="sub-nav-container">
-        <a href="products.html" class="sub-nav-link" style="font-weight: 700;">☰ All</a>
-        <a href="index.html" class="sub-nav-link highlight">⚡ Today's Deals</a>
-        <a href="products.html" class="sub-nav-link">Shop All Products</a>
-        <a href="product-detail.html" class="sub-nav-link">Featured Item</a>
-        <a href="cart.html" class="sub-nav-link">My Cart</a>
-        <a href="contact.html" class="sub-nav-link">Customer Service</a>
+        <a href="products.html" class="sub-nav-link active">⚡ All Gear</a>
+        <a href="products.html" class="sub-nav-link">🎧 Audio & Studio</a>
+        <a href="products.html" class="sub-nav-link">⌚ Smartwatches</a>
+        <a href="products.html" class="sub-nav-link">💻 Ultrabooks & PCs</a>
+        <a href="products.html" class="sub-nav-link">⌨️ Gaming Gear</a>
+        <a href="products.html" class="sub-nav-link">📷 Cameras & Drones</a>
       </div>
     </nav>
   </header>
@@ -112,7 +93,7 @@
               <span class="badge badge-sale">Limited Edition</span>
               <span style="color: #94a3b8; font-size: 0.85rem;">In Stock (42 units)</span>
             </div>
-            <img src="assets/images/headphones.svg" alt="NovaPro Wireless ANC Headphones" style="max-height: 220px; margin: 0 auto;">
+            <img src="assets/images/headphones.jpg" alt="NovaPro Wireless ANC Headphones" style="max-height: 220px; border-radius: 8px; object-fit: cover; margin: 0 auto; display: block;">
             <h3 style="color: #ffffff; margin-top: 1rem; font-size: 1.25rem;">NovaPro Wireless ANC</h3>
             <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0;">Active Noise Cancellation • 45h Battery • Spatial Audio</p>
             <div class="hero-stat-row">
@@ -220,10 +201,10 @@
         <div class="grid grid-cols-4">
           <!-- Product Card 1 -->
           <article class="product-card">
-            <span class="badge badge-sale product-card-badge">Save 25%</span>
+            <span class="badge badge-sale product-card-badge">Save 20%</span>
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/headphones.svg" alt="NovaPro Wireless Studio Headphones" class="product-card-img">
+              <img src="assets/images/headphones.jpg" alt="NovaPro Wireless Studio Headphones" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Audio Gear</span>
@@ -248,7 +229,7 @@
             <span class="badge badge-new product-card-badge">New Arrival</span>
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/smartwatch.svg" alt="Aether Pulse Smart Fitness Watch" class="product-card-img">
+              <img src="assets/images/smartwatch.jpg" alt="Aether Pulse Smart Fitness Watch" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Wearables</span>
@@ -269,10 +250,10 @@
 
           <!-- Product Card 3 -->
           <article class="product-card">
-            <span class="badge badge-featured product-card-badge">Popular</span>
+            <span class="badge badge-primary product-card-badge">Staff Pick</span>
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/laptop.svg" alt="Zenith Pro 16 Ultrabook" class="product-card-img">
+              <img src="assets/images/laptop.jpg" alt="Zenith Pro 16 Ultrabook" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Computing</span>
@@ -296,7 +277,7 @@
           <article class="product-card">
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/earbuds.svg" alt="SonicAir Pro True Wireless Earbuds" class="product-card-img">
+              <img src="assets/images/earbuds.jpg" alt="SonicAir Pro True Wireless Earbuds" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Audio Gear</span>
@@ -319,7 +300,7 @@
           <article class="product-card">
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/speaker.svg" alt="Vortex 360 Waterproof Bluetooth Speaker" class="product-card-img">
+              <img src="assets/images/speaker.jpg" alt="Vortex 360 Waterproof Bluetooth Speaker" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Audio Gear</span>
@@ -343,7 +324,7 @@
             <span class="badge badge-sale product-card-badge">Save ₹10,000</span>
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/camera.svg" alt="Lumina 4K Vlogging Mirrorless Camera" class="product-card-img">
+              <img src="assets/images/camera.jpg" alt="Lumina 4K Vlogging Mirrorless Camera" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Cameras</span>
@@ -367,7 +348,7 @@
           <article class="product-card">
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/keyboard.svg" alt="Apex Pro RGB Mechanical Keyboard" class="product-card-img">
+              <img src="assets/images/keyboard.jpg" alt="Apex Pro RGB Mechanical Keyboard" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Gaming Gear</span>
@@ -391,7 +372,7 @@
             <span class="badge badge-new product-card-badge">New</span>
             <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
             <div class="product-card-img-wrap">
-              <img src="assets/images/drone.svg" alt="SkyFalcon 4K GPS Aerial Drone" class="product-card-img">
+              <img src="assets/images/drone.jpg" alt="SkyFalcon 4K GPS Aerial Drone" class="product-card-img">
             </div>
             <div class="product-card-body">
               <span class="product-card-category">Drones</span>
@@ -428,7 +409,7 @@
               <p>Get a complimentary hardshell case and 3 months of lossless streaming with any headset.</p>
               <a href="products.html?category=audio" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Shop Audio Deals</a>
             </div>
-            <img src="assets/images/headphones.svg" alt="Audio Deal" style="width: 140px; height: 140px; object-fit: contain;">
+            <img src="assets/images/headphones.jpg" alt="Audio Deal" style="width: 140px; height: 140px; object-fit: cover; border-radius: 10px;">
           </div>
 
           <div class="promo-card accent">
@@ -438,7 +419,7 @@
               <p>Boost your productivity with ultra-fast Thunderbolt laptops and wireless mechanical peripherals.</p>
               <a href="products.html?category=computing" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">Explore Workstations</a>
             </div>
-            <img src="assets/images/laptop.svg" alt="Laptop Deal" style="width: 150px; height: 150px; object-fit: contain;">
+            <img src="assets/images/laptop.jpg" alt="Laptop Deal" style="width: 150px; height: 150px; object-fit: cover; border-radius: 10px;">
           </div>
         </div>
       </div>
