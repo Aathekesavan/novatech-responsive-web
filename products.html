@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore NovaTech's extensive catalog of premium electronics, audio gear, wearables, ultrabooks, and smart tech accessories.">
+  <title>Shop All Products | NovaTech Electronics</title>
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p class="announcement-text">⚡ Flash Sale: Use code <strong>TECH20</strong> for 20% off all audio & wearable devices!</p>
+      <div class="announcement-links">
+        <a href="contact.html">Track Order</a>
+        <a href="contact.html">Help & Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NovaTech Homepage">
+        <span class="logo-icon">⚡</span>
+        <span>Nova<span class="logo-accent">Tech</span></span>
+      </a>
+
+      <form class="nav-search" action="products.html" method="GET" role="search">
+        <label for="catalog-search" class="sr-only">Search products</label>
+        <input type="search" id="catalog-search" name="q" class="nav-search-input" placeholder="Search across 40+ products..." aria-label="Search products">
+        <button type="submit" class="nav-search-btn" aria-label="Submit search">🔍</button>
+      </form>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link active">Shop Products</a>
+        <a href="product-detail.html" class="nav-link">Featured Item</a>
+        <a href="cart.html" class="nav-link">My Cart</a>
+        <a href="contact.html" class="nav-link">Contact & FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="btn-icon cart-btn-wrap" aria-label="View shopping cart">
+          🛒
+          <span class="cart-count-badge">2</span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main class="container section" style="padding-top: var(--space-6);">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+      <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-item active" aria-current="page">Shop Products</span>
+    </nav>
+
+    <!-- Page Header -->
+    <div style="margin-bottom: var(--space-8);">
+      <h1>Product Catalog</h1>
+      <p>Explore high-performance computing, audio gear, and lifestyle tech gadgets designed for precision and durability.</p>
+    </div>
+
+    <!-- Catalog Main Layout (Sidebar Filters + Products Grid) -->
+    <div class="catalog-layout">
+      <!-- Filter Sidebar Aside -->
+      <aside class="catalog-filter-aside" aria-label="Product Filters">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <h2 style="font-size: 1.15rem; margin-bottom: 0;">Filters</h2>
+          <a href="products.html" style="font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">Reset All</a>
+        </div>
+
+        <!-- Filter: Categories -->
+        <div class="filter-group">
+          <h3 class="filter-title">Department</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <label class="form-check">
+              <input type="checkbox" name="cat" value="all" checked>
+              <span>All Categories (24)</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="cat" value="audio">
+              <span>Audio & Sound (8)</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="cat" value="wearables">
+              <span>Smart Wearables (5)</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="cat" value="computing">
+              <span>Laptops & Ultrabooks (4)</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="cat" value="gaming">
+              <span>Gaming Peripherals (4)</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="cat" value="cameras">
+              <span>Drones & Cameras (3)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter: Price Range -->
+        <div class="filter-group">
+          <h3 class="filter-title">Price Range</h3>
+          <div class="form-range-wrap">
+            <input type="range" class="form-range" min="50" max="2000" step="50" value="1500" id="priceRange" oninput="document.getElementById('priceDisplay').textContent = '$' + this.value">
+            <div class="range-values">
+              <span>Min: $50</span>
+              <span id="priceDisplay" style="font-weight: 700; color: var(--color-primary);">$1,500</span>
+              <span>Max: $2,000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter: Brands -->
+        <div class="filter-group">
+          <h3 class="filter-title">Brands</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <label class="form-check">
+              <input type="checkbox" name="brand" value="novatech" checked>
+              <span>NovaTech Pro</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="brand" value="aether">
+              <span>Aether Gear</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="brand" value="zenith">
+              <span>Zenith Labs</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="brand" value="sonicair">
+              <span>SonicAir</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="brand" value="lumina">
+              <span>Lumina Optix</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter: Customer Rating -->
+        <div class="filter-group">
+          <h3 class="filter-title">Rating</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <label class="form-check">
+              <input type="radio" name="rating" value="4">
+              <span style="color: var(--color-accent);">★★★★☆</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">4.0 & Up</span>
+            </label>
+            <label class="form-check">
+              <input type="radio" name="rating" value="3">
+              <span style="color: var(--color-accent);">★★★☆☆</span>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">3.0 & Up</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Filter: Availability -->
+        <div class="filter-group">
+          <h3 class="filter-title">Availability</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <label class="form-check">
+              <input type="checkbox" checked>
+              <span>In Stock Only</span>
+            </label>
+            <label class="form-check">
+              <input type="checkbox">
+              <span>On Clearance Sale</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-block" style="margin-top: 1rem;" onclick="showToast('Filters applied successfully!')">Apply Filters</button>
+      </aside>
+
+      <!-- Products Grid Section -->
+      <section class="product-catalog-content" aria-label="Available Products">
+        <!-- Toolbar -->
+        <div class="catalog-toolbar">
+          <div class="catalog-count-text">
+            Showing <span class="catalog-count-bold">1–8</span> of <span class="catalog-count-bold">24</span> tech products
+          </div>
+          <div class="catalog-sort-wrap">
+            <label for="catalog-sort" style="font-size: 0.85rem; color: var(--color-text-muted);">Sort By:</label>
+            <select id="catalog-sort" class="catalog-sort-select">
+              <option value="featured">Featured Picks</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+              <option value="newest">Newest Arrivals</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Catalog Product Grid -->
+        <div class="grid grid-cols-3">
+          <!-- Item 1 -->
+          <article class="product-card">
+            <span class="badge badge-sale product-card-badge">Save 25%</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/headphones.svg" alt="NovaPro Wireless Studio ANC Headphones" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Audio Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">NovaPro Wireless Studio ANC Headphones</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(142)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$249.00</span>
+                  <span class="product-original-price">$329.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="NovaPro Wireless ANC Headphones">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="product-card">
+            <span class="badge badge-new product-card-badge">New</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/smartwatch.svg" alt="Aether Pulse Smart AMOLED Watch" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Wearables</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Aether Pulse Smart AMOLED Watch</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-score">4.7</span>
+                <span class="rating-count">(98)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$189.99</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Aether Pulse Smart AMOLED Watch">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="product-card">
+            <span class="badge badge-featured product-card-badge">Bestseller</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/laptop.svg" alt="Zenith Pro 16 Ultrabook" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Computing</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Zenith Pro 16 M3 Max Ultrabook</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">5.0</span>
+                <span class="rating-count">(64)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$1,499.00</span>
+                  <span class="product-original-price">$1,699.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Zenith Pro 16 M3 Max Ultrabook">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="product-card">
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/earbuds.svg" alt="SonicAir Pro Earbuds" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Audio Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">SonicAir Pro True Wireless ANC Earbuds</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-score">4.6</span>
+                <span class="rating-count">(215)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$129.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="SonicAir Pro True Wireless Earbuds">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="product-card">
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/speaker.svg" alt="Vortex 360 Bluetooth Speaker" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Audio Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Vortex 360 Rugged Waterproof Speaker</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.8</span>
+                <span class="rating-count">(87)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$99.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Vortex 360 Rugged Waterproof Speaker">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="product-card">
+            <span class="badge badge-sale product-card-badge">Save $100</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/camera.svg" alt="Lumina 4K 60FPS Creator Camera" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Cameras</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Lumina 4K 60FPS Creator Camera</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(53)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$699.00</span>
+                  <span class="product-original-price">$799.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Lumina 4K 60FPS Creator Camera">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7 -->
+          <article class="product-card">
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/keyboard.svg" alt="Apex Pro RGB Mechanical Keyboard" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Gaming Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Apex Pro Wireless Mechanical Keyboard</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-score">4.7</span>
+                <span class="rating-count">(112)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$149.99</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Apex Pro Wireless Mechanical Keyboard">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8 -->
+          <article class="product-card">
+            <span class="badge badge-new product-card-badge">New</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/drone.svg" alt="SkyFalcon 4K GPS Drone" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Drones</span>
+              <h3 class="product-card-title"><a href="product-detail.html">SkyFalcon 4K GPS Foldable Drone</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(39)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$459.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="SkyFalcon 4K GPS Foldable Drone">Add +</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Catalog pagination">
+          <button class="page-btn" disabled aria-label="Previous page">&larr; Prev</button>
+          <button class="page-btn active" aria-current="page">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn" aria-label="Next page">Next &rarr;</button>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <span class="logo-icon">⚡</span>
+            <span>Nova<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>NovaTech delivers precision-crafted electronics, audiophile gear, computing hardware, and smart lifestyle accessories.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="product-detail.html">Featured Flagship</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Categories</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=audio">Audio & Headphones</a></li>
+            <li><a href="products.html?category=wearables">Smartwatches</a></li>
+            <li><a href="products.html?category=computing">Ultrabooks & PCs</a></li>
+            <li><a href="products.html?category=accessories">Mechanical Keyboards</a></li>
+            <li><a href="products.html">Drones & Cameras</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Customer Care</h3>
+          <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">Have questions or need technical advice?</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">📞 1-800-NOVATECH</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">✉ support@novatech.io</p>
+          <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem;">Open Mon – Fri: 9:00 AM – 8:00 PM EST</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NovaTech Electronics Inc. All rights reserved. Course Project for Full Stack Development.</div>
+        <div>
+          <span>Privacy Policy</span> • <span>Terms of Service</span> • <span>Security</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

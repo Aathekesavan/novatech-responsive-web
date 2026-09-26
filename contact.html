@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact NovaTech customer service, hardware support team, and browse frequently asked questions.">
+  <title>Contact & Customer Support | NovaTech Electronics</title>
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p class="announcement-text">⚡ Flash Sale: Use code <strong>TECH20</strong> for 20% off all audio & wearable devices!</p>
+      <div class="announcement-links">
+        <a href="contact.html">Track Order</a>
+        <a href="contact.html">Help & Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NovaTech Homepage">
+        <span class="logo-icon">⚡</span>
+        <span>Nova<span class="logo-accent">Tech</span></span>
+      </a>
+
+      <form class="nav-search" action="products.html" method="GET" role="search">
+        <label for="contact-search" class="sr-only">Search products</label>
+        <input type="search" id="contact-search" name="q" class="nav-search-input" placeholder="Search gadgets, audio, laptops..." aria-label="Search products">
+        <button type="submit" class="nav-search-btn" aria-label="Submit search">🔍</button>
+      </form>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Shop Products</a>
+        <a href="product-detail.html" class="nav-link">Featured Item</a>
+        <a href="cart.html" class="nav-link">My Cart</a>
+        <a href="contact.html" class="nav-link active">Contact & FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="btn-icon cart-btn-wrap" aria-label="View shopping cart">
+          🛒
+          <span class="cart-count-badge">2</span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main class="container section" style="padding-top: var(--space-6);">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+      <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-item active" aria-current="page">Contact & Support</span>
+    </nav>
+
+    <!-- Page Header -->
+    <div style="margin-bottom: var(--space-8); text-align: center; max-width: 650px; margin-left: auto; margin-right: auto;">
+      <h1>We're Here to Help</h1>
+      <p>Have an inquiry about an order, hardware compatibility, or warranty service? Reach out to our technical specialists or browse the frequently asked questions below.</p>
+    </div>
+
+    <!-- Contact Split Layout -->
+    <div class="contact-layout">
+      <!-- Left Column: Support Info Cards -->
+      <aside class="contact-info-card" aria-label="Contact Information">
+        <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Get in Touch</h2>
+        <p style="font-size: 0.95rem;">Our customer success team is available Monday through Friday from 9:00 AM to 8:00 PM EST.</p>
+
+        <div class="contact-info-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 2px;">Corporate Headquarters</h3>
+            <p style="font-size: 0.875rem; margin-bottom: 0;">1040 Innovation Way, Suite 400<br>Silicon Valley, CA 94025, USA</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 2px;">Direct Phone Lines</h3>
+            <p style="font-size: 0.875rem; margin-bottom: 0;">Toll-Free: <strong>1-800-NOVATECH</strong><br>International: +1 (650) 555-0199</p>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <h3 style="font-size: 1rem; margin-bottom: 2px;">Electronic Mail</h3>
+            <p style="font-size: 0.875rem; margin-bottom: 0;">Support: <strong>support@novatech.io</strong><br>Sales & Enterprise: sales@novatech.io</p>
+          </div>
+        </div>
+
+        <div style="background-color: var(--color-primary-light); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid #bfdbfe; margin-top: auto;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+            <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-success); display: inline-block;"></span>
+            <strong style="color: var(--color-secondary); font-size: 0.9rem;">Live Tech Chat Active</strong>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.75rem;">Average response time is currently under 3 minutes.</p>
+          <button class="btn btn-sm btn-primary" onclick="showToast('Connecting to a live NovaTech support engineer...')">Start Live Session</button>
+        </div>
+      </aside>
+
+      <!-- Right Column: Contact & Inquiry Form -->
+      <section class="contact-form-card" aria-label="Support Message Form">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Send a Direct Message</h2>
+
+        <form id="contactForm" onsubmit="event.preventDefault(); showToast('✓ Thank you! Your support ticket has been registered.'); this.reset();">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
+              <input type="text" id="fullName" name="name" class="form-control" placeholder="e.g. David Miller" required>
+            </div>
+
+            <div class="form-group">
+              <label for="emailAddr" class="form-label">Email Address <span class="required">*</span></label>
+              <input type="email" id="emailAddr" name="email" class="form-control" placeholder="david@example.com" required>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="phoneNum" class="form-label">Phone Number</label>
+              <input type="tel" id="phoneNum" name="phone" class="form-control" placeholder="+1 (555) 000-0000">
+            </div>
+
+            <div class="form-group">
+              <label for="deptSelect" class="form-label">Inquiry Department <span class="required">*</span></label>
+              <select id="deptSelect" name="department" class="form-control" required>
+                <option value="" disabled selected>Select a department</option>
+                <option value="hardware">Hardware & Technical Support</option>
+                <option value="shipping">Order Tracking & Shipping</option>
+                <option value="returns">Warranty & Returns (RMA)</option>
+                <option value="business">Wholesale & Enterprise Inquiries</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="orderId" class="form-label">Order Number (Optional)</label>
+            <input type="text" id="orderId" name="orderId" class="form-control" placeholder="e.g. NOV-89412">
+          </div>
+
+          <div class="form-group">
+            <label for="messageText" class="form-label">Detailed Message <span class="required">*</span></label>
+            <textarea id="messageText" name="message" class="form-control" rows="5" placeholder="Please describe your question or issue in detail..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-check">
+              <input type="checkbox" required>
+              <span style="font-size: 0.85rem;">I agree to the storage and processing of my contact information in accordance with the NovaTech Privacy Policy.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="min-width: 200px;">
+            📨 Submit Support Ticket
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <!-- FAQ Accordion Section -->
+    <section class="section" style="padding-top: var(--space-8);" aria-label="Frequently Asked Questions">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Common Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Quick answers to common questions regarding shipping, warranty coverage, and return procedures.</p>
+      </div>
+
+      <div class="accordion" style="max-width: 820px; margin: 0 auto;">
+        <!-- FAQ 1 -->
+        <div class="accordion-item active">
+          <button class="accordion-header" type="button" aria-expanded="true">
+            <span>What does the 2-Year NovaTech Warranty cover?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>Every NovaTech product includes a 24-month comprehensive manufacturer warranty. It covers internal component defects, battery retention failures below 80% capacity, acoustic driver anomalies, and firmware defects with zero repair fees and expedited express replacement shipping.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>What are the shipping delivery speeds and thresholds?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>We offer complimentary 2–3 business day Express Delivery on all orders exceeding $50 within the contiguous United States. International shipments typically take 4–7 business days with customs clearance prepaid.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>How do I process a return or exchange within 30 days?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>If you are not 100% delighted with your purchase, you may initiate a return within 30 days of delivery. We provide a prepaid shipping return label, and once scanned by the carrier, a full refund is processed back to your original payment method within 48 hours.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>Are NovaTech audio devices compatible with iOS, Android, and Windows?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>Yes. All NovaTech headphones and speakers feature standard Bluetooth 5.4 multi-point pairing along with low-latency codecs (LDAC, aptX Adaptive, AAC) that work natively with Apple, Windows, Android, and Linux platforms.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+          <button class="accordion-header" type="button" aria-expanded="false">
+            <span>How can I track my package once dispatched?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>As soon as your parcel is scanned at our logistics center, an automated confirmation email containing your direct tracking URL and carrier details (FedEx/UPS/DHL) will be dispatched to your inbox.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <span class="logo-icon">⚡</span>
+            <span>Nova<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>NovaTech delivers precision-crafted electronics, audiophile gear, computing hardware, and smart lifestyle accessories.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="product-detail.html">Featured Flagship</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Categories</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=audio">Audio & Headphones</a></li>
+            <li><a href="products.html?category=wearables">Smartwatches</a></li>
+            <li><a href="products.html?category=computing">Ultrabooks & PCs</a></li>
+            <li><a href="products.html?category=accessories">Mechanical Keyboards</a></li>
+            <li><a href="products.html">Drones & Cameras</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Customer Care</h3>
+          <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">Have questions or need technical advice?</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">📞 1-800-NOVATECH</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">✉ support@novatech.io</p>
+          <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem;">Open Mon – Fri: 9:00 AM – 8:00 PM EST</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NovaTech Electronics Inc. All rights reserved. Course Project for Full Stack Development.</div>
+        <div>
+          <span>Privacy Policy</span> • <span>Terms of Service</span> • <span>Security</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

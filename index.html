@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaTech - Next-generation electronics, premium audio gear, laptops, and smart accessories. Fast shipping and 2-year warranty.">
+  <title>NovaTech | Premium Electronics & Smart Tech Gear</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p class="announcement-text">⚡ Flash Sale: Use code <strong>TECH20</strong> for 20% off all audio & wearable devices!</p>
+      <div class="announcement-links">
+        <a href="contact.html">Track Order</a>
+        <a href="contact.html">Help & Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header & Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="NovaTech Homepage">
+        <span class="logo-icon">⚡</span>
+        <span>Nova<span class="logo-accent">Tech</span></span>
+      </a>
+
+      <!-- Search Bar -->
+      <form class="nav-search" action="products.html" method="GET" role="search">
+        <label for="site-search" class="sr-only">Search products</label>
+        <input type="search" id="site-search" name="q" class="nav-search-input" placeholder="Search gadgets, audio, laptops..." aria-label="Search products">
+        <button type="submit" class="nav-search-btn" aria-label="Submit search">🔍</button>
+      </form>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Shop Products</a>
+        <a href="product-detail.html" class="nav-link">Featured Item</a>
+        <a href="cart.html" class="nav-link">My Cart</a>
+        <a href="contact.html" class="nav-link">Contact & FAQ</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="cart.html" class="btn-icon cart-btn-wrap" aria-label="View shopping cart">
+          🛒
+          <span class="cart-count-badge">2</span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main>
+    <!-- Hero Banner Section -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline">🚀 Breakthrough Technology 2026</div>
+          <h1 class="hero-title">Experience Audio & Computing <span class="highlight">Reimagined.</span></h1>
+          <p class="hero-description">
+            Discover precision-engineered electronics crafted for high performance, audiophile-grade acoustics, and unmatched reliability.
+          </p>
+          <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary btn-lg">Explore Catalog &rarr;</a>
+            <a href="product-detail.html" class="btn btn-outline btn-lg" style="color: #ffffff; border-color: rgba(255,255,255,0.4);">View Flagship Product</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-banner-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <span class="badge badge-sale">Limited Edition</span>
+              <span style="color: #94a3b8; font-size: 0.85rem;">In Stock (42 units)</span>
+            </div>
+            <img src="assets/images/headphones.svg" alt="NovaPro Wireless ANC Headphones" style="max-height: 220px; margin: 0 auto;">
+            <h3 style="color: #ffffff; margin-top: 1rem; font-size: 1.25rem;">NovaPro Wireless ANC</h3>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0;">Active Noise Cancellation • 45h Battery • Spatial Audio</p>
+            <div class="hero-stat-row">
+              <div class="hero-stat-item">
+                <div class="hero-stat-value">45h</div>
+                <div class="hero-stat-label">Playtime</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="hero-stat-value">-40dB</div>
+                <div class="hero-stat-label">Noise Cancel</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="hero-stat-value">4.9 ★</div>
+                <div class="hero-stat-label">Rating</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Propositions Strip -->
+    <section class="features-strip" aria-label="Key Benefits">
+      <div class="container features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrap">🚚</div>
+          <div>
+            <h2 class="feature-title">Free Express Shipping</h2>
+            <p class="feature-desc">Complimentary shipping on all orders over $50</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">🛡️</div>
+          <div>
+            <h2 class="feature-title">2-Year Full Warranty</h2>
+            <p class="feature-desc">Official factory coverage and instant replacements</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">🔄</div>
+          <div>
+            <h2 class="feature-title">30-Day Free Returns</h2>
+            <p class="feature-desc">Hassle-free return policy with zero restocking fees</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrap">🎧</div>
+          <div>
+            <h2 class="feature-title">24/7 Expert Support</h2>
+            <p class="feature-desc">Certified hardware specialists ready to assist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories Section -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Curated Departments</span>
+          <h2 class="section-title">Shop by Category</h2>
+          <p class="section-desc">Browse our premium selection engineered for creators, gamers, and working professionals.</p>
+        </div>
+
+        <div class="grid grid-cols-4">
+          <a href="products.html?category=audio" class="category-card">
+            <div class="category-icon-box">🎧</div>
+            <h3 class="category-title">Audio & Sound</h3>
+            <span class="category-count">18 Products</span>
+          </a>
+
+          <a href="products.html?category=wearables" class="category-card">
+            <div class="category-icon-box">⌚</div>
+            <h3 class="category-title">Smart Wearables</h3>
+            <span class="category-count">12 Products</span>
+          </a>
+
+          <a href="products.html?category=computing" class="category-card">
+            <div class="category-icon-box">💻</div>
+            <h3 class="category-title">Laptops & PCs</h3>
+            <span class="category-count">15 Products</span>
+          </a>
+
+          <a href="products.html?category=accessories" class="category-card">
+            <div class="category-icon-box">🎮</div>
+            <h3 class="category-title">Gaming Gear</h3>
+            <span class="category-count">24 Products</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Products Grid -->
+    <section class="section" style="background-color: var(--color-bg-subtle);" id="trending">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Staff Picks & Best Sellers</span>
+          <h2 class="section-title">Trending Tech Deals</h2>
+          <p class="section-desc">Top-rated items favored by our worldwide community of tech enthusiasts.</p>
+        </div>
+
+        <div class="grid grid-cols-4">
+          <!-- Product Card 1 -->
+          <article class="product-card">
+            <span class="badge badge-sale product-card-badge">Save 25%</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/headphones.svg" alt="NovaPro Wireless Studio Headphones" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Audio Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">NovaPro Wireless Studio ANC Headphones</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(142)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$249.00</span>
+                  <span class="product-original-price">$329.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="NovaPro Wireless Headphones">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 2 -->
+          <article class="product-card">
+            <span class="badge badge-new product-card-badge">New Arrival</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/smartwatch.svg" alt="Aether Pulse Smart Fitness Watch" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Wearables</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Aether Pulse Smart AMOLED Watch</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-score">4.7</span>
+                <span class="rating-count">(98)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$189.99</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Aether Pulse Smartwatch">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 3 -->
+          <article class="product-card">
+            <span class="badge badge-featured product-card-badge">Popular</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/laptop.svg" alt="Zenith Pro 16 Ultrabook" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Computing</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Zenith Pro 16 M3 Max Ultrabook</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">5.0</span>
+                <span class="rating-count">(64)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$1,499.00</span>
+                  <span class="product-original-price">$1,699.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Zenith Pro 16 Ultrabook">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 4 -->
+          <article class="product-card">
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/earbuds.svg" alt="SonicAir Pro True Wireless Earbuds" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Audio Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">SonicAir Pro True Wireless ANC Earbuds</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-score">4.6</span>
+                <span class="rating-count">(215)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$129.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="SonicAir Pro Earbuds">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 5 -->
+          <article class="product-card">
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/speaker.svg" alt="Vortex 360 Waterproof Bluetooth Speaker" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Audio Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Vortex 360 Rugged Waterproof Speaker</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.8</span>
+                <span class="rating-count">(87)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$99.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Vortex 360 Speaker">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 6 -->
+          <article class="product-card">
+            <span class="badge badge-sale product-card-badge">Save $100</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/camera.svg" alt="Lumina 4K Vlogging Mirrorless Camera" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Cameras</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Lumina 4K 60FPS Creator Camera</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(53)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$699.00</span>
+                  <span class="product-original-price">$799.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Lumina 4K Camera">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 7 -->
+          <article class="product-card">
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/keyboard.svg" alt="Apex Pro RGB Mechanical Keyboard" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Gaming Gear</span>
+              <h3 class="product-card-title"><a href="product-detail.html">Apex Pro Wireless Mechanical Keyboard</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★☆</span>
+                <span class="rating-score">4.7</span>
+                <span class="rating-count">(112)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$149.99</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="Apex Pro Keyboard">Add +</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product Card 8 -->
+          <article class="product-card">
+            <span class="badge badge-new product-card-badge">New</span>
+            <button class="product-card-wishlist" aria-label="Save to wishlist">♥</button>
+            <div class="product-card-img-wrap">
+              <img src="assets/images/drone.svg" alt="SkyFalcon 4K GPS Aerial Drone" class="product-card-img">
+            </div>
+            <div class="product-card-body">
+              <span class="product-card-category">Drones</span>
+              <h3 class="product-card-title"><a href="product-detail.html">SkyFalcon 4K GPS Foldable Drone</a></h3>
+              <div class="rating product-card-rating">
+                <span class="rating-stars">★★★★★</span>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(39)</span>
+              </div>
+              <div class="product-card-footer">
+                <div class="product-price-wrap">
+                  <span class="product-current-price">$459.00</span>
+                </div>
+                <button class="btn btn-sm btn-primary add-to-cart-btn" data-name="SkyFalcon 4K Drone">Add +</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="products.html" class="btn btn-outline-primary btn-lg">Browse All 48 Products &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promotional Dual Banners -->
+    <section class="section">
+      <div class="container">
+        <div class="promo-banners-grid">
+          <div class="promo-card dark">
+            <div style="max-width: 60%;">
+              <span class="badge badge-sale" style="margin-bottom: 0.75rem;">Special Offer</span>
+              <h3>Audiophile Soundstage</h3>
+              <p>Get a complimentary hardshell case and 3 months of lossless streaming with any headset.</p>
+              <a href="products.html?category=audio" class="btn btn-primary btn-sm" style="margin-top: 1rem;">Shop Audio Deals</a>
+            </div>
+            <img src="assets/images/headphones.svg" alt="Audio Deal" style="width: 140px; height: 140px; object-fit: contain;">
+          </div>
+
+          <div class="promo-card accent">
+            <div style="max-width: 60%;">
+              <span class="badge badge-new" style="margin-bottom: 0.75rem;">Workstation Ready</span>
+              <h3>Pro Developer Setup</h3>
+              <p>Boost your productivity with ultra-fast Thunderbolt laptops and wireless mechanical peripherals.</p>
+              <a href="products.html?category=computing" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">Explore Workstations</a>
+            </div>
+            <img src="assets/images/laptop.svg" alt="Laptop Deal" style="width: 150px; height: 150px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background-color: var(--color-bg-subtle);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-subtitle">Verified Feedback</span>
+          <h2 class="section-title">Loved by Over 50,000 Customers</h2>
+          <p class="section-desc">See what audio engineers, programmers, and creators have to say about NovaTech products.</p>
+        </div>
+
+        <div class="grid grid-cols-3">
+          <div style="background: #ffffff; padding: 2rem; border-radius: 12px; border: 1px solid var(--color-border);">
+            <div class="rating-stars" style="margin-bottom: 1rem;">★★★★★</div>
+            <p style="font-style: italic; margin-bottom: 1.5rem;">"The NovaPro ANC headphones have completely replaced my office headset. The noise cancellation creates instant quiet, and battery life is genuinely stellar."</p>
+            <div>
+              <strong>David Chen</strong>
+              <div style="font-size: 0.8rem; color: #64748b;">Senior Software Engineer, Seattle</div>
+            </div>
+          </div>
+
+          <div style="background: #ffffff; padding: 2rem; border-radius: 12px; border: 1px solid var(--color-border);">
+            <div class="rating-stars" style="margin-bottom: 1rem;">★★★★★</div>
+            <p style="font-style: italic; margin-bottom: 1.5rem;">"Super fast shipping and top notch customer service. I received my Zenith Pro laptop in 2 days, and the build quality is astonishingly premium."</p>
+            <div>
+              <strong>Sarah Jenkins</strong>
+              <div style="font-size: 0.8rem; color: #64748b;">Creative Director, London</div>
+            </div>
+          </div>
+
+          <div style="background: #ffffff; padding: 2rem; border-radius: 12px; border: 1px solid var(--color-border);">
+            <div class="rating-stars" style="margin-bottom: 1rem;">★★★★★</div>
+            <p style="font-style: italic; margin-bottom: 1.5rem;">"The Apex Pro mechanical keyboard has the most satisfying tactile keystrokes I have ever used. Plus RGB custom lighting syncs seamlessly."</p>
+            <div>
+              <strong>Marcus Brody</strong>
+              <div style="font-size: 0.8rem; color: #64748b;">Game Developer & Streamer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription Strip -->
+    <section class="section" style="background-color: var(--color-secondary); color: #ffffff; text-align: center;">
+      <div class="container" style="max-width: 600px;">
+        <h2 style="color: #ffffff; margin-bottom: 0.5rem;">Stay Ahead of the Curve</h2>
+        <p style="color: #94a3b8; margin-bottom: 1.5rem;">Subscribe for exclusive hardware drops, early VIP access, and weekly tech firmware roundups.</p>
+        <form style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;" onsubmit="event.preventDefault(); showToast('✓ Thank you for subscribing to NovaTech updates!');">
+          <label for="newsletter-email" class="sr-only">Your email address</label>
+          <input type="email" id="newsletter-email" required placeholder="Enter your email address" style="padding: 0.75rem 1.25rem; border-radius: 8px; border: 1px solid #334155; background: #1e293b; color: #ffffff; min-width: 280px;">
+          <button type="submit" class="btn btn-primary">Join Community</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <span class="logo-icon">⚡</span>
+            <span>Nova<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>NovaTech is an industry leader in cutting-edge electronics, consumer audio, computing hardware, and smart lifestyle accessories.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="product-detail.html">Featured Flagship</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Categories</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=audio">Audio & Headphones</a></li>
+            <li><a href="products.html?category=wearables">Smartwatches</a></li>
+            <li><a href="products.html?category=computing">Ultrabooks & PCs</a></li>
+            <li><a href="products.html?category=accessories">Mechanical Keyboards</a></li>
+            <li><a href="products.html">Drones & Cameras</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Customer Care</h3>
+          <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">Have questions or need technical advice?</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">📞 1-800-NOVATECH</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">✉ support@novatech.io</p>
+          <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem;">Open Mon – Fri: 9:00 AM – 8:00 PM EST</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NovaTech Electronics Inc. All rights reserved. Course Project for Full Stack Development.</div>
+        <div>
+          <span>Privacy Policy</span> • <span>Terms of Service</span> • <span>Security</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- UI Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

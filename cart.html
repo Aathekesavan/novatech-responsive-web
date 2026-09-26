@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Review your shopping cart, apply coupon codes, and proceed to secure checkout on NovaTech.">
+  <title>Shopping Cart (2 Items) | NovaTech Electronics</title>
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p class="announcement-text">⚡ Flash Sale: Use code <strong>TECH20</strong> for 20% off all audio & wearable devices!</p>
+      <div class="announcement-links">
+        <a href="contact.html">Track Order</a>
+        <a href="contact.html">Help & Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Primary Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="NovaTech Homepage">
+        <span class="logo-icon">⚡</span>
+        <span>Nova<span class="logo-accent">Tech</span></span>
+      </a>
+
+      <form class="nav-search" action="products.html" method="GET" role="search">
+        <label for="cart-search" class="sr-only">Search products</label>
+        <input type="search" id="cart-search" name="q" class="nav-search-input" placeholder="Search gadgets, audio, laptops..." aria-label="Search products">
+        <button type="submit" class="nav-search-btn" aria-label="Submit search">🔍</button>
+      </form>
+
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Shop Products</a>
+        <a href="product-detail.html" class="nav-link">Featured Item</a>
+        <a href="cart.html" class="nav-link active">My Cart</a>
+        <a href="contact.html" class="nav-link">Contact & FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="cart.html" class="btn-icon cart-btn-wrap" aria-label="View shopping cart">
+          🛒
+          <span class="cart-count-badge">2</span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main class="container section" style="padding-top: var(--space-6);">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb navigation">
+      <span class="breadcrumb-item"><a href="index.html">Home</a></span>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-item active" aria-current="page">Your Shopping Cart</span>
+    </nav>
+
+    <!-- Page Title -->
+    <div style="margin-bottom: var(--space-8);">
+      <h1>Shopping Cart</h1>
+      <p>You have <strong style="color: var(--color-primary);">2 items</strong> in your shopping cart ready for checkout.</p>
+    </div>
+
+    <!-- Free Shipping Progress Tracker Banner -->
+    <div style="background-color: var(--color-primary-light); border: 1px solid #bfdbfe; border-radius: var(--radius-md); padding: 1rem 1.5rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+      <span style="font-size: 1.5rem;">🎉</span>
+      <div>
+        <p style="margin-bottom: 0; font-weight: 600; color: var(--color-secondary);">
+          Congratulations! Your order qualifies for <strong>Free Express Shipping</strong>.
+        </p>
+        <span style="font-size: 0.8rem; color: var(--color-text-muted);">Estimated arrival: Wednesday, Sep 16</span>
+      </div>
+    </div>
+
+    <!-- Cart Layout (Grid: Table + Summary) -->
+    <div class="cart-layout">
+      <!-- Left: Line Items List -->
+      <div class="cart-items-card">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Cart Row 1 -->
+            <tr>
+              <td class="cart-product-td" data-label="Product">
+                <div class="cart-product-cell">
+                  <img src="assets/images/headphones.svg" alt="NovaPro Wireless ANC Headphones" class="cart-thumb">
+                  <div>
+                    <h2 class="cart-product-name"><a href="product-detail.html">NovaPro Wireless Studio ANC</a></h2>
+                    <div class="cart-product-sku">Color: Matte Obsidian | SKU: NVP-920</div>
+                    <span class="badge badge-success" style="margin-top: 4px;">In Stock</span>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Price">
+                <strong style="color: var(--color-secondary);">$249.00</strong>
+              </td>
+              <td data-label="Quantity">
+                <div class="quantity-stepper">
+                  <button class="stepper-btn stepper-dec" aria-label="Decrease quantity">-</button>
+                  <input type="text" class="stepper-input" value="1" readonly aria-label="Quantity">
+                  <button class="stepper-btn stepper-inc" aria-label="Increase quantity">+</button>
+                </div>
+              </td>
+              <td data-label="Total">
+                <strong style="font-size: 1.1rem; color: var(--color-secondary);">$249.00</strong>
+              </td>
+              <td data-label="Action">
+                <button class="cart-remove-btn" onclick="showToast('Removed NovaPro Headphones from cart'); this.closest('tr').remove();" aria-label="Remove item">
+                  🗑️ Remove
+                </button>
+              </td>
+            </tr>
+
+            <!-- Cart Row 2 -->
+            <tr>
+              <td class="cart-product-td" data-label="Product">
+                <div class="cart-product-cell">
+                  <img src="assets/images/smartwatch.svg" alt="Aether Pulse Smart AMOLED Watch" class="cart-thumb">
+                  <div>
+                    <h2 class="cart-product-name"><a href="product-detail.html">Aether Pulse Smart AMOLED Watch</a></h2>
+                    <div class="cart-product-sku">Color: Slate Black | SKU: AET-510</div>
+                    <span class="badge badge-success" style="margin-top: 4px;">In Stock</span>
+                  </div>
+                </div>
+              </td>
+              <td data-label="Price">
+                <strong style="color: var(--color-secondary);">$189.99</strong>
+              </td>
+              <td data-label="Quantity">
+                <div class="quantity-stepper">
+                  <button class="stepper-btn stepper-dec" aria-label="Decrease quantity">-</button>
+                  <input type="text" class="stepper-input" value="1" readonly aria-label="Quantity">
+                  <button class="stepper-btn stepper-inc" aria-label="Increase quantity">+</button>
+                </div>
+              </td>
+              <td data-label="Total">
+                <strong style="font-size: 1.1rem; color: var(--color-secondary);">$189.99</strong>
+              </td>
+              <td data-label="Action">
+                <button class="cart-remove-btn" onclick="showToast('Removed Aether Watch from cart'); this.closest('tr').remove();" aria-label="Remove item">
+                  🗑️ Remove
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Cart Table Actions -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <a href="products.html" class="btn btn-outline">&larr; Continue Shopping</a>
+          <button class="btn btn-outline" style="color: var(--color-danger); border-color: #fca5a5;" onclick="showToast('Cart cleared!'); document.querySelector('.cart-table tbody').innerHTML = '<tr><td colspan=5 style=text-align:center;padding:2rem;>Your cart is empty.</td></tr>';">
+            Clear Shopping Cart
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Order Summary -->
+      <aside class="order-summary-card" aria-label="Order summary">
+        <h2 class="summary-title">Order Summary</h2>
+
+        <div class="summary-line-item">
+          <span>Subtotal (2 items)</span>
+          <strong style="color: var(--color-secondary);">$438.99</strong>
+        </div>
+
+        <div class="summary-line-item">
+          <span>Estimated Shipping</span>
+          <strong style="color: var(--color-success);">FREE</strong>
+        </div>
+
+        <div class="summary-line-item">
+          <span>Estimated Sales Tax (8%)</span>
+          <strong>$35.12</strong>
+        </div>
+
+        <!-- Promo Code Input -->
+        <div class="promo-input-group">
+          <label for="promo-code" class="sr-only">Promo or Coupon Code</label>
+          <input type="text" id="promo-code" class="form-control" placeholder="Promo code (e.g. TECH20)" value="TECH20" style="text-transform: uppercase;">
+          <button class="btn btn-secondary" onclick="showToast('Promo code TECH20 applied: -$20.00 saved!')">Apply</button>
+        </div>
+
+        <div class="summary-line-item total">
+          <span>Total Payable</span>
+          <span>$454.11</span>
+        </div>
+
+        <button class="btn btn-primary btn-block btn-lg" style="margin-top: 1.5rem;" onclick="showToast('Proceeding to encrypted payment gateway...')">
+          🔒 Proceed to Checkout
+        </button>
+
+        <div style="margin-top: 1.5rem; text-align: center;">
+          <p style="font-size: 0.75rem; color: var(--color-text-light); margin-bottom: 0.5rem;">Guaranteed Safe & Secure Checkout</p>
+          <div style="display: flex; justify-content: center; gap: 0.75rem; font-size: 1.25rem;">
+            <span>💳</span>
+            <span>🔒</span>
+            <span>🛡️</span>
+            <span>📱</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <span class="logo-icon">⚡</span>
+            <span>Nova<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>NovaTech delivers precision-crafted electronics, audiophile gear, computing hardware, and smart lifestyle accessories.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="product-detail.html">Featured Flagship</a></li>
+            <li><a href="cart.html">Shopping Cart</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Categories</h3>
+          <ul class="footer-links">
+            <li><a href="products.html?category=audio">Audio & Headphones</a></li>
+            <li><a href="products.html?category=wearables">Smartwatches</a></li>
+            <li><a href="products.html?category=computing">Ultrabooks & PCs</a></li>
+            <li><a href="products.html?category=accessories">Mechanical Keyboards</a></li>
+            <li><a href="products.html">Drones & Cameras</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Customer Care</h3>
+          <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">Have questions or need technical advice?</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">📞 1-800-NOVATECH</p>
+          <p style="font-size: 0.875rem; color: #ffffff; font-weight: 600;">✉ support@novatech.io</p>
+          <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.5rem;">Open Mon – Fri: 9:00 AM – 8:00 PM EST</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NovaTech Electronics Inc. All rights reserved. Course Project for Full Stack Development.</div>
+        <div>
+          <span>Privacy Policy</span> • <span>Terms of Service</span> • <span>Security</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
