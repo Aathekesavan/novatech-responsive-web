@@ -26,42 +26,67 @@
     </div>
   </div>
 
-  <!-- Primary Header & Navigation -->
+  <!-- Primary Amazon / Flipkart Multi-Tier Header -->
   <header class="site-header">
-    <div class="container nav-container">
+    <div class="nav-top-bar">
       <!-- Brand Logo -->
       <a href="index.html" class="brand-logo" aria-label="NovaTech Homepage">
-        <span class="logo-icon">⚡</span>
-        <span>Nova<span class="logo-accent">Tech</span></span>
+        <span>⚡ Nova<span class="logo-accent">Tech</span></span>
       </a>
 
-      <!-- Search Bar -->
-      <form class="nav-search" action="products.html" method="GET" role="search">
-        <label for="site-search" class="sr-only">Search products</label>
-        <input type="search" id="site-search" name="q" class="nav-search-input" placeholder="Search gadgets, audio, laptops..." aria-label="Search products">
+      <!-- Delivery Location Widget -->
+      <div class="nav-location" title="Delivery Location">
+        <span class="nav-location-icon">📍</span>
+        <div class="nav-location-text">
+          <span>Deliver to Chennai</span>
+          <strong>600001</strong>
+        </div>
+      </div>
+
+      <!-- Wide Central Search Bar -->
+      <form class="nav-search-bar" action="products.html" method="GET" role="search">
+        <select class="nav-search-category" aria-label="Select Category">
+          <option value="all">All Departments</option>
+          <option value="audio">Audio & Headphones</option>
+          <option value="computing">Laptops & PCs</option>
+          <option value="wearables">Smartwatches</option>
+          <option value="gaming">Gaming Tech</option>
+        </select>
+        <input type="search" name="q" class="nav-search-input" placeholder="Search NovaTech for laptops, audio, smartwatches..." aria-label="Search products">
         <button type="submit" class="nav-search-btn" aria-label="Submit search">🔍</button>
       </form>
 
-      <!-- Navigation Links -->
-      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="products.html" class="nav-link">Shop Products</a>
-        <a href="product-detail.html" class="nav-link">Featured Item</a>
-        <a href="cart.html" class="nav-link">My Cart</a>
-        <a href="contact.html" class="nav-link">Contact & FAQ</a>
-      </nav>
-
-      <!-- Action Buttons -->
-      <div class="nav-actions">
-        <a href="cart.html" class="btn-icon cart-btn-wrap" aria-label="View shopping cart">
-          🛒
-          <span class="cart-count-badge">2</span>
-        </a>
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          ☰
-        </button>
+      <!-- Account / Returns / Cart -->
+      <div class="nav-user-item">
+        <span class="nav-line-1">Hello, Sign In</span>
+        <span class="nav-line-2">Account & Lists ▾</span>
       </div>
+
+      <a href="cart.html" class="nav-user-item">
+        <span class="nav-line-1">Returns</span>
+        <span class="nav-line-2">& Orders</span>
+      </a>
+
+      <a href="cart.html" class="nav-cart-btn" aria-label="View shopping cart">
+        <div class="nav-cart-icon-wrap">
+          <span class="nav-cart-icon">🛒</span>
+          <span class="nav-cart-badge">2</span>
+        </div>
+        <span class="nav-cart-label">Cart</span>
+      </a>
     </div>
+
+    <!-- Secondary Nav Ribbon -->
+    <nav class="sub-nav-ribbon" aria-label="Department Ribbon">
+      <div class="sub-nav-container">
+        <a href="products.html" class="sub-nav-link" style="font-weight: 700;">☰ All</a>
+        <a href="index.html" class="sub-nav-link highlight">⚡ Today's Deals</a>
+        <a href="products.html" class="sub-nav-link">Shop All Products</a>
+        <a href="product-detail.html" class="sub-nav-link">Featured Item</a>
+        <a href="cart.html" class="sub-nav-link">My Cart</a>
+        <a href="contact.html" class="sub-nav-link">Customer Service</a>
+      </div>
+    </nav>
   </header>
 
   <!-- Main Landmark -->
